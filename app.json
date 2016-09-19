@@ -1,6 +1,6 @@
 {
   "id": "com.jilles.oregon",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "compatibility": ">=0.9.1",
   "category": [ "climate" ],
   "name": {
@@ -141,6 +141,33 @@
       "images": {
         "large": "drivers/UVR128/assets/images/large.jpg",
         "small": "drivers/UVR128/assets/images/small.jpg"
+      },
+      "pair": [
+
+        {
+          "id": "list_sensors",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_sensors"
+          }
+        },
+        {
+          "id": "add_sensors",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "THN132N",
+      "name": {
+        "en": "THN132N",
+        "nl": "THN132N"
+      },
+      "class": "sensor",
+      "capabilities": [ "measure_temperature", "alarm_battery" ],
+      "images": {
+        "large": "drivers/THN132N/assets/images/large.jpg",
+        "small": "drivers/THN132N/assets/images/small.jpg"
       },
       "pair": [
 

@@ -3,12 +3,15 @@
 
 var util = require('util');
 var driverBTHR968 = require('./drivers/BTHR968/driver.js');
-var driverTHGR122NX = require('./drivers/THGR122NX/driver.js');
+var driverTHN132N = require('./drivers/THN132N/driver.js');
 var driverPCR800 = require('./drivers/PCR800/driver.js');
 var driverUVR128 = require('./drivers/UVR128/driver.js');
 var convert = require('./baseConverter.js').jan.ConvertBase;
 var initFlag = 1;
 
+
+
+// https://www.disk91.com/2013/technology/hardware/oregon-scientific-sensors-with-raspberry-pi/
 var dataLayouts = {
     'TH1': {
         len: 7,
@@ -939,7 +942,9 @@ function makeHomeyDriverCompatibleAandPasstoDriver(result) {
         case "ec70":  // UVR128 uv meter corona
             processUVR128(result);
             break;
-
+        case "ec40":  // THN132n only temp 
+            processTHN132N(result);
+            break;
 
         }
 
@@ -1004,8 +1009,6 @@ function processTHGR122NX(result)
         battery: result.lowbattery,
         temperature: parseFloat(parseFloat(result.data.temperature).toFixed(2)),
         humidity: parseInt(result.data.humidity),
-        pressure: parseInt((Number(result.data.pressure)).toFixed(2)),
-        forecast: result.data.forecast
         };
 
 
@@ -1030,6 +1033,39 @@ function processTHGR122NX(result)
     }
     
 };  // end device
+
+function processTHN132N(result) {
+    var oregonTHN132NDevice =
+        {
+            id: result.id + result.rolling,
+            SensorID: result.id,
+            channel: result.channel,
+            rollingCode: result.rolling,
+            battery: result.lowbattery,
+            temperature: parseFloat(parseFloat(result.data.temperature).toFixed(2)),
+           };
+
+
+    var homeyDevice =
+        {
+            data: { id: oregonTHN132NDevice.id },
+            name: oregonTHN132NDevice.id,
+            capabilities: ["measure_temperature", "measure_humidity", "alarm_battery"],
+            measure_temperature: oregonTHN132NDevice.temperature,
+            measure_humidity: oregonTHN132NDevice.humidity,
+            alarm_battery: oregonTHN132NDevice.battery,
+        };
+
+
+    if (!contains(driverTHN132N.homeyDevices, homeyDevice)) {
+        driverTHN132N.homeyDevices.push(homeyDevice);
+    } else {
+
+        driverTHN132N.updateCapabilitiesHomeyDevice(homeyDevice);
+    }
+
+};  // end device
+
 
 
 function processPCR800(result) {
