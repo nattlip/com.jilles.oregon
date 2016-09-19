@@ -16,6 +16,8 @@ THGR122NX, THGN132ES, THGR228N device id 1d20 rainmeter PCR800 deviceid 2914 and
 
 install the THGN132ES or THGR228N as THGR122NX
 
+19-09-2016 added THN132N sensor to be tested yet by third party , i dont have that sensor
+           install THWR800 or THR238NF as THN132N sensor.
 
 http://wmrx00.sourceforge.net/Arduino/OregonScientific-RF-Protocols.pdf
 
