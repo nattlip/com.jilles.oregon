@@ -4,6 +4,7 @@
 var util = require('util');
 var driverBTHR968 = require('./drivers/BTHR968/driver.js');
 var driverTHN132N = require('./drivers/THN132N/driver.js');
+var driverTHGR122NX = require('./drivers/THGR122NX/driver.js');
 var driverPCR800 = require('./drivers/PCR800/driver.js');
 var driverUVR128 = require('./drivers/UVR128/driver.js');
 var convert = require('./baseConverter.js').jan.ConvertBase;
@@ -1139,7 +1140,7 @@ function processUVR128(result) {
 
 };  // end device
 
-
+//TODO: add sign temperature before winter
 
 
 
