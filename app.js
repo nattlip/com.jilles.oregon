@@ -943,10 +943,12 @@ function makeHomeyDriverCompatibleAandPasstoDriver(result) {
         case "ec70":  // UVR128 uv meter corona
             processUVR128(result);
             break;
-        case "ec40":  // THN132n only temp 
+        case "ec40":  // THN132n only temp c844
             processTHN132N(result);
             break;
-
+        case " c844":  // THN132n only temp c844
+            processTHN132N(result);
+            break;
         }
 
 }
@@ -1053,7 +1055,6 @@ function processTHN132N(result) {
             name: oregonTHN132NDevice.id,
             capabilities: ["measure_temperature", "measure_humidity", "alarm_battery"],
             measure_temperature: oregonTHN132NDevice.temperature,
-            measure_humidity: oregonTHN132NDevice.humidity,
             alarm_battery: oregonTHN132NDevice.battery,
         };
 
