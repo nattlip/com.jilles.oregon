@@ -1053,7 +1053,7 @@ function processTHN132N(result) {
         {
             data: { id: oregonTHN132NDevice.id },
             name: oregonTHN132NDevice.id,
-            capabilities: ["measure_temperature", "measure_humidity", "alarm_battery"],
+            capabilities: ["measure_temperature", "alarm_battery"],
             measure_temperature: oregonTHN132NDevice.temperature,
             alarm_battery: oregonTHN132NDevice.battery,
         };
