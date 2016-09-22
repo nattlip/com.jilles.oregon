@@ -946,7 +946,7 @@ function makeHomeyDriverCompatibleAandPasstoDriver(result) {
         case "ec40":  // THN132n only temp c844
             processTHN132N(result);
             break;
-        case " c844":  // THN132n only temp c844
+        case "c844":  // THN132n only temp c844
             processTHN132N(result);
             break;
         }
