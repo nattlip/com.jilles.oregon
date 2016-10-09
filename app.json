@@ -1,6 +1,6 @@
 {
   "id": "com.jilles.oregon",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "compatibility": ">=0.9.1",
   "category": [ "climate" ],
   "name": {
@@ -24,7 +24,7 @@
         },
         {
           "name": "Ramon Baas",
-          "email": "athom@ramonbaas.nl"
+          "email": ""
         },
         {
           "name": "Floris van Ingen",

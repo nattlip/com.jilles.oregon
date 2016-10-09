@@ -149,9 +149,10 @@ function createDriver(driver) {
 
                     // get the bulb with a locally defined function
                     var device = getDeviceById(device_data);
+                    if (device instanceof Error || (typeof device === "undefined") ) return callback(device);
                     console.log('driver 279 capabilitis get device. measure_temperature  ', device.measure_temperature)
                     console.log('driver 201 device_data  ', device_data)
-                    if (device instanceof Error) return callback(device);
+                    
                 
                     self.realtime(device_data, 'measure_temperature', device.measure_temperature);
 
@@ -174,11 +175,11 @@ function createDriver(driver) {
                     console.log('get hunidity  davicedata_id ', device_data.id)
                     // get the bulb with a locally defined function
                     var device = getDeviceById(device_data);
-
+                    if (device instanceof Error || (typeof device === "undefined") ) return callback(device);
                     console.log('get hunidity  homeyDevices ', util.inspect(device, false, null))
                     console.log('driver 279 capabilitis get homeyDevices.measure_humidity  ', device.measure_humidity)
                     console.log('driver 201 device_data  ', device_data)
-                    if (device instanceof Error) return callback(device);
+                   
 
                     self.realtime(device_data, 'measure_humidity', device.measure_humidity);
 
@@ -202,9 +203,10 @@ function createDriver(driver) {
 
                     // get the bulb with a locally defined function
                     var device = getDeviceById(device_data);
+                    if (device instanceof Error || (typeof device === "undefined") ) return callback(device);
                     console.log('driver 279 capabilitis get device.alarm_battery  ', device.alarm_battery)
                     console.log('driver 201 device_data  ', device_data)
-                    if (device instanceof Error) return callback(device);
+                    
 
                     self.realtime(device_data, 'alarm_battery', device.alarm_battery);
                    

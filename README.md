@@ -1,4 +1,4 @@
-﻿# com.jilles.oregon
+﻿﻿# com.jilles.oregon
 ﻿
 ﻿
 Homey app to view Oregon Scientific sensor info in Athom Homey
@@ -14,13 +14,23 @@ The RF 2.1 and 3.0 protocol from  Oregon Scientific can be read.
 I have now 6 sensor devices added the BTHR968 device id 5d60 (first for hex digits from name) and the
 THGR122NX, THGN132ES, THGR228N device id 1d20 rainmeter PCR800 deviceid 2914 and uv meter UVR128 deviceid ec70
 
-install the THGN132ES or THGR228N as THGR122NX
+
+
+## changeLog
 
 19-09-2016 added THN132N sensor to be tested yet by third party , i dont have that sensor.
-           install THWR800 or THR238NF as THN132N sensor.
+           Install THWR800 or THR238NF as THN132N sensor.
+
+09-10-2016: version 0.0.19 : fixed a bug where devices were undefined after ptp or reboot homey or restart app.
+           App crashed immediately after start.
+
+
 
 http://wmrx00.sourceforge.net/Arduino/OregonScientific-RF-Protocols.pdf
+
+https://help.github.com/articles/about-writing-and-formatting-on-github/
 
 [![Paypal donate][pp-donate-image]][pp-donate-link]
 [pp-donate-link]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=42UGL52J4KPZE
 [pp-donate-image]: https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif
+

@@ -146,12 +146,13 @@ var self = {
             get: function (device_data, callback) {
 
                 console.log('capabilitis get measure_temperature entered')
-
-                // get the bulb with a locally defined function
                 var device = getDeviceById(device_data);
+                if (device instanceof Error || (typeof device === "undefined")) return callback(device);
+                // get the bulb with a locally defined function
+               
                 console.log('driver 279 capabilitis get device. measure_temperature  ', device.measure_temperature)
                 console.log('driver 201 device_data  ', device_data)
-                if (device instanceof Error) return callback(device);
+                
 
                 self.realtime(device_data, 'measure_temperature', device.measure_temperature);
 
@@ -175,10 +176,16 @@ var self = {
                 // get the bulb with a locally defined function
                 var device = getDeviceById(device_data);
 
+                console.log('device  ', device);
+                
+                console.log('device instanceof Error  ', (device instanceof Error));
+
+                if (device instanceof Error || (typeof device === "undefined") ) return callback(device);
+                
                 console.log('get hunidity  homeyDevices ', util.inspect(device, false, null))
                 console.log('driver 279 capabilitis get homeyDevices.measure_humidity  ', device.measure_humidity)
                 console.log('driver 201 device_data  ', device_data)
-                if (device instanceof Error) return callback(device);
+             
                 
                 self.realtime(device_data, 'measure_humidity', device.measure_humidity);
 
@@ -200,9 +207,11 @@ var self = {
 
                 // get the bulb with a locally defined function
                 var device = getDeviceById(device_data);
+                if (device instanceof Error || (typeof device === "undefined")) return callback(device);
+
                 console.log('driver 279 capabilitis get device.measure_pressure  ', device.measure_pressure)
                 console.log('driver 201 device_data  ', device_data)
-                if (device instanceof Error) return callback(device);
+                
 
                 self.realtime(device_data, 'measure_pressure', device.measure_pressure);
 
@@ -225,9 +234,10 @@ var self = {
 
                 // get the bulb with a locally defined function
                 var device = getDeviceById(device_data);
+                if (device instanceof Error || (typeof device === "undefined")) return callback(device);
                 console.log('driver 279 capabilitis get device.alarm_battery  ', device.alarm_battery)
                 console.log('driver 201 device_data  ', device_data)
-                if (device instanceof Error) return callback(device);
+                
 
                 self.realtime(device_data, 'alarm_battery', device.alarm_battery);
 

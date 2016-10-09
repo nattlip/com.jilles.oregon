@@ -149,9 +149,10 @@ function createDriver(driver) {
 
                     // get the bulb with a locally defined function
                     var device = getDeviceById(device_data);
+                    if (device instanceof Error || (typeof device === "undefined") ) return callback(device);
                     console.log('driver 279 capabilitis get device. measure_temperature  ', device.measure_temperature)
                     console.log('driver 201 device_data  ', device_data)
-                    if (device instanceof Error) return callback(device);
+                   
 
                     self.realtime(device_data, 'measure_temperature', device.measure_temperature);
 
@@ -177,11 +178,12 @@ function createDriver(driver) {
 
                     // get the bulb with a locally defined function
                     var device = getDeviceById(device_data);
+                    self.realtime(device_data, 'alarm_battery', device.alarm_battery);
                     console.log('driver 279 capabilitis get device.alarm_battery  ', device.alarm_battery)
                     console.log('driver 201 device_data  ', device_data)
                     if (device instanceof Error) return callback(device);
 
-                    self.realtime(device_data, 'alarm_battery', device.alarm_battery);
+                    
 
                     // send the dim value to Homey
                     if (typeof callback == 'function') {
