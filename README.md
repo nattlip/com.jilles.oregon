@@ -23,6 +23,8 @@ THGR122NX, THGN132ES, THGR228N device id 1d20 rainmeter PCR800 deviceid 2914 and
 
 09-10-2016: version 0.0.19 : fixed a bug where devices were undefined after ptp or reboot homey or restart app.
            App crashed immediately after start.
+           
+04-02-2017  added sentry logging            
 
 
 
@@ -39,7 +41,7 @@ https://help.github.com/articles/about-writing-and-formatting-on-github/
 
 
 
-Copyright (c) 2016 Jilles Miedema
+Copyright (c) 2017 Jilles Miedema
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
