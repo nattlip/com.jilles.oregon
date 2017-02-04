@@ -8,6 +8,7 @@ var driverTHGR122NX = require('./drivers/THGR122NX/driver.js');
 var driverPCR800 = require('./drivers/PCR800/driver.js');
 var driverUVR128 = require('./drivers/UVR128/driver.js');
 var convert = require('./baseConverter.js').jan.ConvertBase;
+const Log = require('homey-log').Log;
 var initFlag = 1;
 
 
