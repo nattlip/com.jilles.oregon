@@ -1,6 +1,6 @@
 {
   "id": "com.jilles.oregon",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "compatibility": ">=0.9.1",
   "category": [ "climate" ],
   "name": {
@@ -277,8 +277,7 @@
         ],
         "manchesterUnit": 488.28125,
         "manchesterMaxUnits": 2,
-        "repetitions": 0,
-        "sensitivity": 2,
+       "sensitivity": 0.5,
         "minimalLength": 140,
         "maximalLength": 180
       },
@@ -348,8 +347,7 @@
         ],
        "manchesterUnit": 488.28125,
        "manchesterMaxUnits": 2,
-       "repetitions": 0,
-       "sensitivity": 2,
+       "sensitivity": 0.5,
        "minimalLength": 60,
         "maximalLength": 90
 
