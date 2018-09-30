@@ -1,6 +1,6 @@
 {
   "id": "com.jilles.oregon",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "compatibility": ">=0.9.1",
   "category": [ "climate" ],
   "name": {
@@ -16,26 +16,37 @@
     "email": "athom.jilles.miedema@gmail.com"
   },
 
-    "contributors": {
-      "developers": [
-        {
-          "name": "Jilles Miedema",
-          "email": "athom.jilles.miedema@gmail.com"
-        },
-        {
-          "name": "Ramon Baas",
-          "email": ""
-        },
-        {
-          "name": "Floris van Ingen",
-          "email": "floris.vaningen@isds.nl"
-        }
-      ]
-   
+  "contributors": {
+    "developers": [
+      {
+        "name": "Jilles Miedema",
+        "email": "athom.jilles.miedema@gmail.com"
+      },
+      {
+        "name": "Ramon Baas",
+        "email": ""
+      },
+      {
+        "name": "Floris van Ingen",
+        "email": "floris.vaningen@isds.nl"
+      }
+    ]
+
   },
 
+  "bugs": {
+    "url": "https://github.com/nattlip/com.jilles.oregon/issues"
+  },
 
+  "tags": {
+    "en": [ "weather", "climate", "rain", "temperature", "pressure", "hygrometer", "uv" ]
+  },
 
+  "athomForumDiscussionId": 1834,
+
+  "homeyCommunityTopicId": 141,
+
+  
 
   "images": {
     "large": "./assets/images/large.jpg",
@@ -277,7 +288,7 @@
         ],
         "manchesterUnit": 488.28125,
         "manchesterMaxUnits": 2,
-       "sensitivity": 0.5,
+        "sensitivity": 0.5,
         "minimalLength": 140,
         "maximalLength": 180
       },
@@ -298,7 +309,19 @@
           1,
           0,
           1,
-          0,          
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
           1,
           0,
           1,
@@ -314,23 +337,11 @@
           1,
           0,
           1,
-          0,          
-          1,
           0,
           1,
           0,
           1,
           0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,
-          1,
-          0,          
           0,
           1,
           1,
@@ -338,17 +349,17 @@
           0,
           1,
           1,
-          0         
+          0
         ],
         "eof": [],
         "words": [
-        [ 0, 1 ],
-        [ 1, 0 ]          
+          [ 0, 1 ],
+          [ 1, 0 ]
         ],
-       "manchesterUnit": 488.28125,
-       "manchesterMaxUnits": 2,
-       "sensitivity": 0.5,
-       "minimalLength": 60,
+        "manchesterUnit": 488.28125,
+        "manchesterMaxUnits": 2,
+        "sensitivity": 0.5,
+        "minimalLength": 60,
         "maximalLength": 90
 
       }
